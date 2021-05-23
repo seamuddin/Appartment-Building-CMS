@@ -75,4 +75,23 @@
     padding: 5px;
     font-size: 20px;
 }
+/*Header bottom*/
+.header-menu-flex-end
+{
+    justify-content: flex-end;
+}
 
+/*Slider CSS*/
+
+.slider-height-default
+{
+    height: 320px;
+}
+
+.slider-background
+{
+background-size: cover !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    height: 520px;
+}
