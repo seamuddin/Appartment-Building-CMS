@@ -3,6 +3,10 @@
     padding: 0;
     margin: 0;
 }
+body
+{
+overflow-x: hidden;
+}
 .ml7 {
        position: relative;
     font-weight: 600;
@@ -692,4 +696,24 @@ background-image: linear-gradient(to right ,#0597F2 30%, #0554F2 100%);
 
 }
 
+/*About Us*/
+.header-title
+{
+        background-size: cover !important;
+    background-repeat: no-repeat !important;
+    background-position: 30% 65%!important;
 
+
+}
+.aboutus-header-title
+{
+    background: #00000091;
+    width: 100%;
+    padding: 4rem;
+}
+.about-us-content-text
+{
+        color: #454547;
+    font-size: 17px;
+    line-height: 22px;
+}
