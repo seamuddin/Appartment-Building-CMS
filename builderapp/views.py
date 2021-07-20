@@ -7,3 +7,18 @@ def home(request):
 
 def aboutus(request):
     return render(request, 'aboutus.html')
+
+def ongoing(request):
+    return render(request, 'ongoing_project.html')
+
+def upcoming(request):
+    return render(request, 'upcoming_project.html')
+
+def completed(request):
+    return render(request, 'completed_project.html')
+
+def contactus(request):
+    return render(request, 'contactus.html')
+
+def testimonial(request):
+    return render(request, 'testimonial.html')

@@ -44,8 +44,8 @@
             </div>
         </div>
     </div>
-    </div>
-    <div class="container header-bottom">
+    <div id="navbar_top" class="container-fluid bg-white">
+        <div id="" class="container header-bottom bg-white">
         <nav class="navbar navbar-expand-lg navbar-light ">
             <a class="navbar-brand" href="#">
                 <img class="img-fluid" style="height: auto; width: 140px; padding-left: 8px;"
@@ -58,37 +58,33 @@
                 <ul class="navbar-nav mr-auto">
 
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
                     </li>
-<!--                    <li class="nav-item dropdown ">-->
-<!--                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"-->
-<!--                           data-bs-toggle="dropdown" aria-expanded="false">Dropdown</a>-->
-<!--                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">-->
-<!--                            <li><a class="dropdown-item" href="#">Action</a></li>-->
-<!--                            <li><a class="dropdown-item" href="#">Another action</a></li>-->
-<!--                            <li>-->
-<!--                                <hr class="dropdown-divider">-->
-<!--                            </li>-->
-<!--                            <li><a class="dropdown-item" href="#">Something else here</a></li>-->
-<!--                        </ul>-->
-<!--                    </li>-->
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">About Us</a>
+                  <li class="nav-item dropdown ">
+                       <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                           data-bs-toggle="dropdown" aria-expanded="false">Projects</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="{% url 'ongoing' %}">Ongoing</a></li>
+                            <li><a class="dropdown-item" href="{% url 'upcoming' %}">Upcoming</a></li>
+                            <li><a class="dropdown-item" href="{% url 'completed' %}">Completed</a></li>
+                        </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Projects</a>
+                        <a class="nav-link" href="{% url 'testimonial' %}">Testimonials</a>
+                    </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="{% url 'aboutus' %}">About Us</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Clients</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Contact Us</a>
+                        <a class="nav-link" href="{% url 'contactus' %}">Contact Us</a>
                     </li>
 
                 </ul>
             </div>
         </nav>
     </div>
+    </div>
+
 
 </section>
 
@@ -114,6 +110,21 @@
         easing: "easeOutExpo",
         delay: 1000
     });
+
+    document.addEventListener("DOMContentLoaded", function(){
+  window.addEventListener('scroll', function() {
+      if (window.scrollY > 50) {
+        document.getElementById('navbar_top').classList.add('fixed-top');
+        // add padding top to show content behind navbar
+        navbar_height = document.querySelector('.navbar').offsetHeight;
+        document.body.style.paddingTop = navbar_height + 'px';
+      } else {
+        document.getElementById('navbar_top').classList.remove('fixed-top');
+         // remove padding top from body
+        document.body.style.paddingTop = '0';
+      }
+  });
+});
 
 
 </script>
