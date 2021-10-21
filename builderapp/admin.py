@@ -4,10 +4,11 @@ from .models import *
 
 
 class SettingAdmin(admin.ModelAdmin):
-    list_display = ['title', "mobile_no", "phone_no"]
+    list_display = ['id', 'title', "mobile_no", "phone_no", 'motto', 'footer', 'logo_tag']
+    list_editable = ['title', 'mobile_no', 'phone_no', 'motto', 'footer']
     fieldsets = (
         ('Basic Info', {
-            'fields': ('title', 'logo', 'footer', )
+            'fields': ('title', 'motto', 'logo', 'footer', )
         }),
         ('Company Info', {
             'fields': ('mobile_no', 'phone_no', 'about_us', 'contact_us', )
@@ -20,6 +21,9 @@ class SettingAdmin(admin.ModelAdmin):
     def has_add_permission(self, request):
         return not GeneralSettings.objects.exists()
 
+    def has_change_permission(self, request, obj=None):
+        return True
+
 
 class ProjectImageInline(admin.TabularInline):
     model = ProjectImages
@@ -28,8 +32,14 @@ class ProjectImageInline(admin.TabularInline):
 
 
 class ProjectAdmin(admin.ModelAdmin):
+    list_display = ('name', 'code', 'start_date', 'tentative_end_date', 'project_value', )
     inlines = [ProjectImageInline]
+
+
+class TestimonialAdmin(admin.ModelAdmin):
+    list_display = ('name', 'image', 'message', )
 
 
 admin.site.register(GeneralSettings, SettingAdmin)
 admin.site.register(Project, ProjectAdmin)
+admin.site.register(Testimonials, TestimonialAdmin)

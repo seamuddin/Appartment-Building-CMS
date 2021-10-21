@@ -20,3 +20,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('builderapp.urls')),
 ]
+
+admin.site.site_header = "Admin Panel"
+admin.site.site_title = "Admin Portal"
+admin.site.index_title = "Welcome to Admin Portal"
