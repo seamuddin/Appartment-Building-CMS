@@ -717,3 +717,125 @@ background-image: linear-gradient(to right ,#0597F2 30%, #0554F2 100%);
     font-size: 17px;
     line-height: 22px;
 }
+
+.testimonial-image
+{
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 260px;
+    width: 260px;
+    position: relative;
+    z-index: 104;
+    margin-top: -40px;
+}
+.testimonial-details
+{
+        padding: 37px;
+    border: 1px solid #f0c100;
+}
+.testimonial-main-img
+{
+        display: flex;
+    justify-content: center;
+    height: 215px;
+}
+.testimonial-details h4::before
+{
+    content: '';
+}
+
+@media (min-width: 320px) {
+     .testimonial-image
+     {
+         background-size: cover;
+    background-repeat: no-repeat;
+    height: 198px;
+    width: 200px;
+    position: relative;
+    z-index: 104;
+    margin-top: 61px;
+     }
+    .testimonial-details
+    {
+            border: 1px solid #f0c100;
+    padding-top: 71px!important;
+    padding: 25px;
+    }
+
+}
+
+@media (min-width: 576px) {
+
+
+    .testimonial-image
+     {    background-size: cover;
+    background-repeat: no-repeat;
+    height: 240px;
+    width: 240px;
+    position: relative;
+    z-index: 104;
+    margin-top: 22px;     }
+    .testimonial-details
+    {
+            border: 1px solid #f0c100;
+    padding-top: 71px!important;
+    padding: 25px;
+    }
+
+}
+@media (min-width: 776px) {
+
+    .testimonial-image
+     {
+          background-size: cover;
+    background-repeat: no-repeat;
+    height: 240px;
+    width: 240px;
+    position: relative;
+    z-index: 104;
+    margin-right: -65px;
+     }
+    .testimonial-details
+    {
+          border: 1px solid #f0c100;
+    padding-top: 15px!important;
+    padding: 15px;
+    padding-left: 80px;
+    }
+    .testimonial-main-img
+    {
+        justify-content: end!important;
+    }
+
+
+
+}
+
+@media (min-width: 992px) {
+
+    .testimonial-image
+     {
+           background-size: cover;
+    background-repeat: no-repeat;
+    height: 250px;
+    width: 250px;
+    position: relative;
+    z-index: 104;
+    margin-right: -74px;
+    margin-top: -20px;
+     }
+    .testimonial-details
+    {
+          border: 1px solid #f0c100;
+    padding-top: 15px!important;
+    padding: 15px;
+    padding-left: 80px;
+    }
+    .testimonial-main-img
+    {
+        justify-content: end!important;
+    }
+
+
+
+}
