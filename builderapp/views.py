@@ -35,3 +35,7 @@ def contactus(request):
 
 def testimonial(request):
     return render(request, 'testimonial.html')
+
+
+def details(request):
+    return render(request, 'details.html')

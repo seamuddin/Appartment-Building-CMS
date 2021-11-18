@@ -1,0 +1,75 @@
+{% include 'includes/header.html' %}
+{% load static %}
+
+<section class="header-title" style="background:url('{% static 'img/aboutusimage.jpg' %}')">
+    <div class="container-fluid aboutus-header-title">
+        <div class="container">
+              <h4 class="text-white">Titles of the post</h4>
+            <p class="text-white">Date of the post : 12-10-2020</p>
+        </div>
+
+
+    </div>
+</section>
+
+
+<section class="about-us-content-section p-5 m-3">
+
+         <div class="container mt-2">
+            <div class="row justify-content-center" style="align-items: center;">
+
+{#                There will be 2 or more picture, this image is cover picture of the post#}
+                <div class="col-12 col-md-8 pt-2" style="background: url({%static 'img/demo.jpg'%}); height: 400px; background-size: cover; background-repeat: no-repeat; display: flex; justify-content: center;">
+                     <img class="img-fluid" src="" alt="">
+                </div>
+                 <div class="col-12 col-md-8 d-flex flex-column justify-content-center pt-5 ">
+
+                     <h2 style="font-size: 25px;" class="about-us-content-text">Title of the post </h2>
+                    <h4 class="about-us-content-text">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci iste natus quasi reprehenderit sunt.
+                        A consequatur corporis doloribus est eum eveniet, iure, magni maxime minus nulla quis, ut voluptatibus.
+                        Possimus!
+                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci iste natus quasi reprehenderit sunt.
+                        A consequatur corporis doloribus est eum eveniet, iure, magni maxime minus nulla quis, ut voluptatibus.
+                        Possimus!
+                    </h4>
+                     <p>By -Mr.Pk Halder</p>
+                </div>
+
+                <div class="col-12 col-md-4 pt-2 m-2" style="background: url({%static 'img/demo.jpg'%}); height: 400px; background-size: cover; background-repeat: no-repeat; display: flex; justify-content: center;">
+                     <img class="img-fluid" src="" alt="">
+                </div>
+                 <div class="col-12 col-md-4 pt-2 m-2" style="background: url({%static 'img/demo.jpg'%}); height: 400px; background-size: cover; background-repeat: no-repeat; display: flex; justify-content: center;">
+                     <img class="img-fluid" src="" alt="">
+                </div>
+
+
+
+
+
+
+            </div>
+    </div>
+
+
+
+
+
+
+
+
+</section>
+
+
+
+
+
+
+<!-- Swiper JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+<!-- Initialize Swiper -->
+
+
+<!-- Script -->
+{% include 'includes/footer.html' %}
